@@ -15,7 +15,7 @@ cp .env.example .env
 docker compose up --build
 ```
 
-Access docs at http://localhost:8000/api/docs/
+Access docs at http://localhost:18000/api/docs/
 
 ## Manual start (without Docker)
 
@@ -23,7 +23,7 @@ Access docs at http://localhost:8000/api/docs/
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-export DATABASE_URL=postgres://ecommerce:ecommerce@localhost:5432/ecommerce
+export DATABASE_URL=postgres://ecommerce:ecommerce@localhost:25432/ecommerce
 export DJANGO_SECRET_KEY=dev-secret-key
 export DJANGO_DEBUG=1
 python manage.py migrate

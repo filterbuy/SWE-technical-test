@@ -10,7 +10,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     ports:
-      - "5432:5432"
+      - "25432:5432"
 
   web:
     build: .
@@ -18,7 +18,7 @@ services:
     volumes:
       - .:/app
     ports:
-      - "8000:8000"
+      - "18000:8000"
     environment:
       - DATABASE_URL=postgres://ecommerce:ecommerce@db:5432/ecommerce
       - DJANGO_SECRET_KEY=dev-secret-key
